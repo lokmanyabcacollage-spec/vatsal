@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SustainStack | Cloud Cost and AI Sustainability</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sustainable.css">
+</head>
+<body>
+  <div class="page-bg"></div>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-top">
+        <a class="home-link" href="/index.html">Back to Home</a>
+        <span class="badge">Sustainable Energy Project</span>
+      </div>
+      <h1>Cloud Sustainability Lab</h1>
+      <p class="hero-copy">
+        Compare cloud website costs, estimate AI token energy usage, and evaluate platforms by pricing, scalability, and performance.
+      </p>
+      <div class="hero-stats">
+        <article>
+          <span>Clouds</span>
+          <strong>3 Providers</strong>
+        </article>
+        <article>
+          <span>Cost Inputs</span>
+          <strong>Storage + Compute + Transfer</strong>
+        </article>
+        <article>
+          <span>AI Focus</span>
+          <strong>Sustainable Tokens</strong>
+        </article>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel" id="costCalculator">
+        <div class="section-head">
+          <p class="eyebrow">A) Cloud Cost Calculation</p>
+          <h2>Monthly + Yearly Cost Estimator</h2>
+        </div>
+
+        <div class="form-grid">
+          <label>
+            Storage (GB / month)
+            <input type="number" id="storageGb" min="0" step="1" value="500">
+          </label>
+          <label>
+            Compute (vCPU-hours / month)
+            <input type="number" id="computeHours" min="0" step="1" value="1200">
+          </label>
+          <label>
+            Data Transfer (GB / month)
+            <input type="number" id="transferGb" min="0" step="1" value="800">
+          </label>
+          <label>
+            Traffic Profile
+            <select id="trafficProfile">
+              <option value="balanced">Balanced Web App</option>
+              <option value="storageHeavy">Storage Heavy</option>
+              <option value="computeHeavy">Compute Heavy</option>
+              <option value="deliveryHeavy">Delivery Heavy</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="button-row">
+          <button id="calculateBtn" type="button">Calculate Cloud Cost</button>
+        </div>
+
+        <div class="results-grid" id="costCards"></div>
+      </section>
+
+      <section class="panel" id="tokenSustainability">
+        <div class="section-head">
+          <p class="eyebrow">B) Sustainable Tokens for AI</p>
+          <h2>Token Energy and Optimization Planner</h2>
+        </div>
+
+        <div class="form-grid token-grid">
+          <label>
+            Monthly Input Tokens
+            <input type="number" id="inputTokens" min="0" step="1000" value="3000000">
+          </label>
+          <label>
+            Monthly Output Tokens
+            <input type="number" id="outputTokens" min="0" step="1000" value="1200000">
+          </label>
+          <label>
+            Model Efficiency
+            <select id="modelEfficiency">
+              <option value="high">High Efficiency (small/optimized models)</option>
+              <option value="medium" selected>Medium Efficiency</option>
+              <option value="low">Low Efficiency (very large model)</option>
+            </select>
+          </label>
+          <label>
+            Token Reduction Goal (%)
+            <input type="number" id="reductionGoal" min="0" max="80" step="1" value="25">
+          </label>
+        </div>
+
+        <div class="button-row">
+          <button id="tokenBtn" type="button">Analyze Token Sustainability</button>
+        </div>
+
+        <div class="token-results" id="tokenResults"></div>
+        <div class="tip-list" id="tipsList"></div>
+      </section>
+
+      <section class="panel" id="softwareComparison">
+        <div class="section-head">
+          <p class="eyebrow">C) Comparison of Cloud Cost Software</p>
+          <h2>Pricing vs Scalability vs Performance</h2>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Platform</th>
+                <th>Monthly Cost (USD)</th>
+                <th>Pricing Score (10)</th>
+                <th>Scalability Score (10)</th>
+                <th>Performance Score (10)</th>
+                <th>Best For</th>
+              </tr>
+            </thead>
+            <tbody id="comparisonBody"></tbody>
+          </table>
+        </div>
+
+        <div class="summary-box" id="comparisonSummary"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="sustainable.js"></script>
+</body>
+</html>
